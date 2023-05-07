@@ -1,0 +1,68 @@
+.bouncing{
+    width: 250px;
+    height: 250px;
+    transform: scale(1);
+    background-color: blueviolet;
+    animation: infinite 4s bounce;
+    margin: auto;
+    transform: translateZ(0);
+}
+@keyframes bounce {
+    0%{transform: scale(1);}
+    67%{transform: scale(0.60);}
+    70%{transform: scale(0.50);}
+    73%{transform: scale(1.30);}
+    76%{transform: scale(0.80);}
+    79%{transform: scale(1.20);}
+    82%{transform: scale(0.85);}
+    85%{transform: scale(1.15);}
+    88%{transform: scale(0.90);}
+    91%{transform: scale(1.10);}
+    94%{transform: scale(0.95);}
+    97%{transform: scale(1.05);}
+    100%{transform: scale(1);}
+}
+#cards-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 25px 25px;
+}
+.card{
+    border: solid 5px gold;
+    border-radius: 5%;
+}
+.containerpokemon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerpokemon img{
+    background-color: black;
+}
+.hover-info{
+    position: absolute;
+    z-index: 3;
+    display: block;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background-color: aquamarine;
+}
+.card:hover .hover-info{
+    visibility: visible;
+}
+.hover-info-full{
+    display: none;
+    visibility: hidden;
+}
+.card:hover .hover-info-full{
+    display: inline-block;
+    visibility: visible;
+    position: fixed;
+    z-index: 6;
+    top: 10%;
+    left: 10%;
+    background-color: red;
+}
