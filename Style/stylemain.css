@@ -14,7 +14,6 @@ body{
     but boxes should not auto elements around themselves. focusing the use of auto in one direction either outward or inward else empty or unwanted results may happen i think */
     text-align: center;
     /* should fill body with as much details i want as not to repeat myself */
-    min-width: 650px;
     display: flex;
     flex-flow: column;
     min-height: 100vh;
