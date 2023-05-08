@@ -37,7 +37,8 @@ footer{
 /* -    -   -   -   -
 Nav bar styling
 -   -   -   -   - */
-#nav-bar{
+nav{
+    background-image: url(../Images/MintBlock32px.svg);
     padding-top: 20px;
     display: inline-flex;
     flex-direction: row;
