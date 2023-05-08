@@ -1,0 +1,41 @@
+.top-section{
+    display: flex;
+}
+/* -    -   -   -   -
+skill icon section
+-   -   -   -   - */
+#skill-container{
+    display: flex;
+}
+#skill-text{
+    align-self: center;
+    padding: 3rem;
+}
+#skill-icons{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+}
+.skill-icon{
+}
+.skill-icon img{
+    max-width: 50px;
+}
+
+
+/*  -   -   -   -   -
+phones
+-   -   -   -   - */
+@media only screen and (max-width: 900px) {
+    #skill-container{
+        flex-direction: column;
+    }
+    .skill-icon img{
+        max-width: 50px;
+    }
+    #skill-icons{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 0;
+    }
+}
