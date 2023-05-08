@@ -47,3 +47,27 @@ function footerMaker(){
 }
 
 footerMaker()
+
+const headerEL = document.querySelector("header");
+
+
+function navMaker(){
+
+}
+
+// <nav>
+//     <div class="nav-el">
+//         <a class="link-el" href="contact.html">Contact</a>
+//     </div>
+//     <div class="nav-el dropdown-menu">
+//         <span class="dropdown-label link-el">Projects</span>
+//         <div class="dropdown-content">
+//         </div>
+//     </div>
+//     <div class="nav-el">
+//         <a class="link-el" href="index.html">Main</a>
+//     </div>
+//     <div class="nav-el">
+//         <a class="link-el" href="aboutme.html">About</a>
+//     </div>
+// </nav>
