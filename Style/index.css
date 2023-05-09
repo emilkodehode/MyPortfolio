@@ -16,8 +16,6 @@ skill icon section
     grid-template-columns: auto auto auto;
     gap: 1rem;
 }
-.skill-icon{
-}
 .skill-icon img{
     max-width: 50px;
 }
