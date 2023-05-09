@@ -40,9 +40,9 @@ Nav bar styling
 nav{
     background-image: url(../Images/MintBlock32px.svg);
     padding-top: 20px;
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 20px;
     position: relative;
 }
