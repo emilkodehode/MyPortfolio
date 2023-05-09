@@ -27,27 +27,27 @@ const dropDownContent = [
         
 navMaker()
         
-        function navBarDropDownMaker(targetEl, linkArray){
-            linkArray.forEach(string => {
-                let link = document.createElement("a")
-                link.href = string + ".html"
-                link.textContent = string
-                link.className = "link-el link-drop"
-                targetEl.append(link) 
-            });
-        }
-        
-        
-        const footerEL = document.querySelector("footer");
-        
-        function footerMaker(){
-            const link = document.createElement("a")
-            link.href = "https://github.com/emilkodehode"
-            link.textContent = "My Github"
-            footerEL.append(link)
-        }
-        
-        footerMaker()
+function navBarDropDownMaker(targetEl, linkArray){
+    linkArray.forEach(string => {
+        let link = document.createElement("a")
+        link.href = string + ".html"
+        link.textContent = string
+        link.className = "link-el link-drop"
+        targetEl.append(link) 
+    });
+}
+ 
+
+const footerEL = document.querySelector("footer");
+
+function footerMaker(){
+    const link = document.createElement("a")
+    link.href = "https://github.com/emilkodehode"
+    link.textContent = "My Github"
+    footerEL.append(link)
+}
+
+footerMaker()
         
         
         
@@ -63,11 +63,16 @@ function navMaker(){
     mainEl.textContent = "Home"
 
     dropdownElContainer.className = "nav-el link-el dropdown-menu"
+
     const dropdownListEl = document.createElement("div")
     dropdownListEl.classList = "dropdown-content"
+    
     const paraDropDown = document.createElement("p")
     paraDropDown.textContent = "Projects"
-    paraDropDown.classList = "dropdown-label link-el"
+    paraDropDown.classList = "link-el"
+
+    const symbol = document.createElement("img")
+    symbol.src = "./Images/symbols/expand_more_FILL0_wght400_GRAD0_opsz48.svg"
     
     contactEl.classList = "nav-el link-el"
     contactEl.href = "contact.html"
@@ -77,7 +82,7 @@ function navMaker(){
     aboutEl.href = "aboutme.html"
     aboutEl.textContent = "About"
     
-    dropdownElContainer.append(paraDropDown, dropdownListEl)
+    dropdownElContainer.append(paraDropDown, symbol, dropdownListEl)
     navEl.append(mainEl, dropdownElContainer, contactEl, aboutEl)
     headerEL.append(navEl)
     navBarDropDownMaker(dropdownListEl, dropDownContent)

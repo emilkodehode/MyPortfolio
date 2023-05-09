@@ -10,6 +10,7 @@ skill icon section
 #skill-text{
     align-self: center;
     padding: 3rem;
+    text-align: left;
 }
 #skill-icons{
     display: grid;
