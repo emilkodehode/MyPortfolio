@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Delicious+Handrawn&family=Nothing+You+Could+Do&family=Play&display=swap');
+/* 
+Allerta Stencil
+Delicious Handrawn
+Nothing You Could Do
+Play
+*/
+*{
+    margin: 0;
+}
+#pokemain-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 25px 25px;
+}
+.card{
+    max-width: 600px;
+    position: relative;
+    z-index: 0;
+    padding: 2rem;
+    border: gold 10px solid;
+    border-radius: 10%;
+}
+.card-header{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Delicious Handrawn";
+    font-size: 2.5rem;
+}
+.card-header p{
+    text-transform: capitalize;
+}
+.pkmn-details{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+}
+.container-pokemon img{
+    background-color: black;
+    border-radius: inherit;
+
+}
+.details-text{
+    border-radius: inherit;
+    position: absolute;
+    z-index: 3;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.base-stat{
+    justify-self: center;
+    align-self: center;
+}
+.hidden{
+    display: none;
+}
+.additional-details-text{
+    visibility: visible;
+    position: fixed;
+    z-index: 6;
+    top: 10%;
+    left: 10%;
+    background-color: red;
+}
+.additional-hidden{
+    display: none;
+}
+/*- -   -   -   -   -   -   -   -   -   -
+ styling for type symbols
+ -  -   -   -   -   -   -   -   -   -   -*/
+.types-container, .type-icon{
+    justify-content: center;
+    display: flex;
+}
+.type-icon{
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0.75rem;
+    width: fit-content;
+}
+.type-icon img{
+    max-width: 100%;
+    height: auto;
+}
+.type-icon p{
+    font-family: "Play";
+    align-self: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+/* -    -   -   -   -   -   -   -   -   -   -
+styling for clicked card event
+-   -   -   -   -   -   -   -   -   -   -   -*/

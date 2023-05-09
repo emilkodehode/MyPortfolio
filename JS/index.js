@@ -21,7 +21,6 @@ const dropDownContent = [
         "bouncingballs",
         "fancylines",
         "mycalculator",
-        "collision",
         "oppgaver",
         "animations",
         "games"];

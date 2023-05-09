@@ -101,6 +101,9 @@ fancy links
     text-align: center;
     text-decoration: none;
 }
+span{
+    display: block;
+}
 /* -    -   -   -   -   
 Parallax dangerzone
 -   -   -   -   - */
