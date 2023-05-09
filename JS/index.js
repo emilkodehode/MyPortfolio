@@ -32,7 +32,7 @@ navMaker()
                 let link = document.createElement("a")
                 link.href = string + ".html"
                 link.textContent = string
-                link.className = "link-el"
+                link.className = "link-el link-drop"
                 targetEl.append(link) 
             });
         }
@@ -62,12 +62,12 @@ function navMaker(){
     mainEl.href = "index.html"
     mainEl.textContent = "Home"
 
-    dropdownElContainer.className = "nav-el dropdown-menu"
+    dropdownElContainer.className = "nav-el link-el dropdown-menu"
     const dropdownListEl = document.createElement("div")
     dropdownListEl.classList = "dropdown-content"
-    const spanDropDown = document.createElement("span")
-    spanDropDown.textContent = "Projects"
-    spanDropDown.classList = "dropdown-label link-el"
+    const paraDropDown = document.createElement("p")
+    paraDropDown.textContent = "Projects"
+    paraDropDown.classList = "dropdown-label link-el"
     
     contactEl.classList = "nav-el link-el"
     contactEl.href = "contact.html"
@@ -77,7 +77,7 @@ function navMaker(){
     aboutEl.href = "aboutme.html"
     aboutEl.textContent = "About"
     
-    dropdownElContainer.append(spanDropDown, dropdownListEl)
+    dropdownElContainer.append(paraDropDown, dropdownListEl)
     navEl.append(mainEl, dropdownElContainer, contactEl, aboutEl)
     headerEL.append(navEl)
     navBarDropDownMaker(dropdownListEl, dropDownContent)
