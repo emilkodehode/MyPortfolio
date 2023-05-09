@@ -11,6 +11,7 @@ skill icon section
     align-self: center;
     padding: 3rem;
     text-align: left;
+    line-height: 1.5rem;
 }
 #skill-icons{
     display: grid;

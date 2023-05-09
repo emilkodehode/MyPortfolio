@@ -16,15 +16,14 @@ const headerEL = document.querySelector("header");
 const dropDownContent = [
     "mypokedex",
     "todonotes",
-        "quiz","drumkit",
-        "gridmode",
-        "bouncingballs",
-        "fancylines",
-        "mycalculator",
-        "oppgaver",
-        "animations",
-        "games"];
-        
+    "quiz",
+    "drumkit",
+    "gridmode",
+    "bouncingballs",
+    "fancylines",
+    "mycalculator",
+    "games"];
+    
 navMaker()
         
 function navBarDropDownMaker(targetEl, linkArray){
