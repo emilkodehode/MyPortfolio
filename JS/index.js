@@ -10,11 +10,12 @@ function navbardropdown(){
 navbardropdown();
 */
 
-const navDropDownEl = document.querySelector(".dropdown-content");
-const linkStyleClass = "link-el";
+const headerEL = document.querySelector("header");
+
+
 const dropDownContent = [
-        "mypokedex",
-        "todonotes",
+    "mypokedex",
+    "todonotes",
         "quiz","drumkit",
         "gridmode",
         "bouncingballs",
@@ -24,35 +25,63 @@ const dropDownContent = [
         "oppgaver",
         "animations",
         "games"];
-
-function navBarDropDownMaker(targetEl, linkArray){
-    linkArray.forEach(string => {
-        let link = document.createElement("a")
-        link.href = string + ".html"
-        link.textContent = string
-        link.className = linkStyleClass
-        targetEl.append(link) 
-    });
-}
-
-navBarDropDownMaker(navDropDownEl, dropDownContent)
-
-const footerEL = document.querySelector("footer");
-
-function footerMaker(){
-    const link = document.createElement("a")
-    link.href = "https://github.com/emilkodehode"
-    link.textContent = "My Github"
-    footerEL.append(link)
-}
-
-footerMaker()
-
-const headerEL = document.querySelector("header");
-
-
+        
+navMaker()
+        
+        function navBarDropDownMaker(targetEl, linkArray){
+            linkArray.forEach(string => {
+                let link = document.createElement("a")
+                link.href = string + ".html"
+                link.textContent = string
+                link.className = "link-el"
+                targetEl.append(link) 
+            });
+        }
+        
+        
+        const footerEL = document.querySelector("footer");
+        
+        function footerMaker(){
+            const link = document.createElement("a")
+            link.href = "https://github.com/emilkodehode"
+            link.textContent = "My Github"
+            footerEL.append(link)
+        }
+        
+        footerMaker()
+        
+        
+        
 function navMaker(){
+    const navEl = document.createElement("nav")
+    const aboutEl = document.createElement("a")
+    const dropdownElContainer = document.createElement("div")
+    const mainEl = document.createElement("a")
+    const contactEl = document.createElement("a")
+    
+    mainEl.classList = "nav-el link-el"
+    mainEl.href = "index.html"
+    mainEl.textContent = "Home"
 
+    dropdownElContainer.className = "nav-el dropdown-menu"
+    const dropdownListEl = document.createElement("div")
+    dropdownListEl.classList = "dropdown-content"
+    const spanDropDown = document.createElement("span")
+    spanDropDown.textContent = "Projects"
+    spanDropDown.classList = "dropdown-label link-el"
+    
+    contactEl.classList = "nav-el link-el"
+    contactEl.href = "contact.html"
+    contactEl.textContent = "Contact"
+    
+    aboutEl.classList = "nav-el link-el"
+    aboutEl.href = "aboutme.html"
+    aboutEl.textContent = "About"
+    
+    dropdownElContainer.append(spanDropDown, dropdownListEl)
+    navEl.append(mainEl, dropdownElContainer, contactEl, aboutEl)
+    headerEL.append(navEl)
+    navBarDropDownMaker(dropdownListEl, dropDownContent)
 }
 
 // <nav>

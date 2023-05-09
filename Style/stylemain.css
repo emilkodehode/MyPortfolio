@@ -42,7 +42,7 @@ nav{
     padding-top: 20px;
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 20px;
     position: relative;
 }
@@ -52,12 +52,8 @@ nav{
     transform: translateX(-25px);
     margin-top: 10px;
     padding: 12px;
-    border-top: none;
     visibility: hidden;
     position: absolute;
-    border: var(--mintdarkest-color) 15px groove;
-    background-color: var(--mint-color);
-    border-top: none;
     opacity: 0;
     transition: 750ms all;
     display: flex;
@@ -67,26 +63,6 @@ nav{
 .dropdown-menu:hover .dropdown-content{
     opacity: 1;
     visibility: visible;
-}
-.nav-el{
-    background-color: var(--mint-color);
-    padding: 10px;
-    border: var(--mintdarkest-color) 15px groove;
-    border-bottom: var(--mintdarkest-color) 15px ridge;
-}
-.nav-el:first-child{
-    border-radius: 5rem 0 0 5rem;
-    border-bottom: var(--mintdarkest-color) 15px ridge;
-}
-.nav-el:last-child{
-    border-radius: 0 5rem 5rem 0;
-    border-right: var(--mintdarkest-color) 15px ridge;
-    border-left: var(--mintdarkest-color) 15px ridge;
-}
-/* remember to check for only child last or else it will accept last child as the correct choice. as always order of operation matters in all programming */
-.nav-el:only-child{
-    border-radius: 5rem;
-    border-width: 20px;
 }
 .dropdown-menu{border-bottom: none;}
 /* -    -   -   -   -
@@ -118,17 +94,12 @@ section{
 /* -    -   -   -   -
 fancy links
 -   -   -   -   - */
-.link-el, .link-el:link .link-el:visited{
+.link-el, .link-el:link .link-el:visited span{
     background-color: aquamarine;
     color: black;
     padding: 10px;
     text-align: center;
     text-decoration: none;
-    border-radius: 5rem 0;
-}
-.link-el:hover, .link-el:active{
-    background-color: var(--mintdarkest-color);
-    border-radius: 0 5rem;
 }
 /* -    -   -   -   -   
 Parallax dangerzone
