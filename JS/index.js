@@ -12,19 +12,22 @@ navbardropdown();
 
 const headerEL = document.querySelector("header");
 
+const footerEL = document.querySelector("footer");
 
 const dropDownContent = [
     "mypokedex",
+    "minesweeper",
+    "colorgame",
     "todonotes",
     "quiz",
     "drumkit",
-    "gridmode",
     "bouncingballs",
     "fancylines",
-    "mycalculator",
-    "games"];
+    "mycalculator"
+];
     
 navMaker()
+footerMaker()
         
 function navBarDropDownMaker(targetEl, linkArray){
     linkArray.forEach(string => {
@@ -35,21 +38,7 @@ function navBarDropDownMaker(targetEl, linkArray){
         targetEl.append(link) 
     });
 }
- 
 
-const footerEL = document.querySelector("footer");
-
-function footerMaker(){
-    const link = document.createElement("a")
-    link.href = "https://github.com/emilkodehode"
-    link.textContent = "My Github"
-    footerEL.append(link)
-}
-
-footerMaker()
-        
-        
-        
 function navMaker(){
     const navEl = document.createElement("nav")
     const aboutEl = document.createElement("a")
@@ -59,32 +48,43 @@ function navMaker(){
     
     mainEl.classList = "nav-el link-el"
     mainEl.href = "index.html"
-    mainEl.textContent = "Home"
+    mainEl.textContent = "Hovedside"
 
     dropdownElContainer.className = "nav-el link-el dropdown-menu"
-
+    
     const dropdownListEl = document.createElement("div")
     dropdownListEl.classList = "dropdown-content"
     
     const paraDropDown = document.createElement("p")
-    paraDropDown.textContent = "Projects"
+    paraDropDown.textContent = "Prosjekter"
     paraDropDown.classList = "link-el"
-
+    
     const symbol = document.createElement("img")
     symbol.src = "./Images/symbols/expand_more_FILL0_wght400_GRAD0_opsz48.svg"
     
     contactEl.classList = "nav-el link-el"
     contactEl.href = "contact.html"
-    contactEl.textContent = "Contact"
+    contactEl.textContent = "Kontakt Meg"
     
     aboutEl.classList = "nav-el link-el"
     aboutEl.href = "aboutme.html"
-    aboutEl.textContent = "About"
+    aboutEl.textContent = "Mer Om Meg"
     
     dropdownElContainer.append(paraDropDown, symbol, dropdownListEl)
     navEl.append(mainEl, dropdownElContainer, contactEl, aboutEl)
     headerEL.append(navEl)
     navBarDropDownMaker(dropdownListEl, dropDownContent)
+}
+
+function footerMaker(){
+    const link = document.createElement("a")
+    link.href = "https://github.com/emilkodehode"
+    link.textContent = "My Github"
+    footerEL.append(link)
+}
+
+function projectCards(){
+    //link thumbnail
 }
 
 // <nav>

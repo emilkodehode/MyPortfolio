@@ -148,7 +148,7 @@ function cellRevealer(cellClicked){
 function cellRender(cell){
     //this x,y minus this size / 2 widht height this size
     ctx.beginPath()
-    ctx.rect(cell.x * cell.width, cell.y * cell.height, cell.width, cell.height);
+    ctx.rect(cell.x * cell.width + 2, cell.y * cell.height + 2, cell.width - 2, cell.height - 2);
     ctx.fillStyle = "purple"
     ctx.fill();
     ctx.closePath()
@@ -158,7 +158,7 @@ function cellReveal(cell){
     cell.isRevealed = true
     //this x,y minus this size / 2 widht height this size
     ctx.beginPath()
-    ctx.rect(cell.x * cell.width, cell.y * cell.height, cell.width, cell.height);
+    ctx.rect(cell.x * cell.width + 2, cell.y * cell.height + 2, cell.width  - 2, cell.height  - 2);
     ctx.fillStyle = cell.cellColor
     ctx.fill();
     let fontSize = 500 / getSize()
@@ -214,9 +214,10 @@ function handleUserClick(clickx,clicky){
     }
 }
 
-//oh snap what the fuk is this and how the hell does it work and how did i manage to figure it out i think the variables is mirrored and evertyhing works on pure luck
+
 /*i know mouseclick is correct and i check if my click is inside the box of a cell.
-so i go trough every cell and check if myclick is inside? but why is a cell start doubled and cell end just one*/
+so i go trough every cell and check if myclick is inside?
+i knew what i was aiming for but i missed it several times before i got it working*/
 
 function cellClicked(clickx,clicky, cell){
     let cellxstart = cell.x * cell.width + cell.width
