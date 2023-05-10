@@ -55,6 +55,9 @@ nav{
     display: flex;
     flex-direction: row;
     align-self: center;
+    text-decoration: none;
+    color: black;
+    background-color: aquamarine;
 }
 .dropdown-menu{
     position: relative;

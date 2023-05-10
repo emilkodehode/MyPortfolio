@@ -44,12 +44,11 @@ function navBarDropDownMaker(targetEl, linkArray){
 function navMaker(){
     const navEl = document.createElement("nav")
 
-    const mainEl = document.createElement("a")
-    mainEl.classList = "link-el"
-    mainEl.href = "index.html"
+    const mainEl = document.createElement("p")
     mainEl.textContent = "Hovedside"
-    const btnHome = document.createElement("div")
-    btnHome.classList = "btnstyling nav-el"
+    const btnHome = document.createElement("a")
+    btnHome.classList = "btnstyling"
+    btnHome.href = "index.html"
     const symbolHome = document.createElement("img")
     symbolHome.src = "./Images/symbols/home_FILL0_wght400_GRAD0_opsz48.svg"
     
@@ -63,7 +62,6 @@ function navMaker(){
     
     const paraDropDown = document.createElement("p")
     paraDropDown.textContent = "Prosjekter"
-    paraDropDown.classList = "link-el"
     const btnDrop = document.createElement("div")
     btnDrop.className = "btnstyling"
     const symbolDrop = document.createElement("img")
@@ -71,23 +69,21 @@ function navMaker(){
     
     btnDrop.append(paraDropDown, symbolDrop)
 
-    const contactEl = document.createElement("a")
-    contactEl.href = "contact.html"
-    contactEl.classList = "link-el"
+    const contactEl = document.createElement("p")
     contactEl.textContent = "Kontakt Meg"
-    const btnContact = document.createElement("div")
-    btnContact.className = "btnstyling nav-el"
+    const btnContact = document.createElement("a")
+    btnContact.className = "btnstyling"
+    btnContact.href = "contact.html"
     const symbolContact = document.createElement("img")
     symbolContact.src = "./Images/symbols/mail_FILL0_wght400_GRAD0_opsz48.svg"
     
     btnContact.append(contactEl, symbolContact)
     
-    const aboutEl = document.createElement("a")
-    aboutEl.classList = "nav-el link-el"
-    aboutEl.href = "aboutme.html"
+    const aboutEl = document.createElement("p")
     aboutEl.textContent = "Mer Om Meg"
-    const btnAbout = document.createElement("div")
-    btnAbout.classList = "btnstyling nav-el"
+    const btnAbout = document.createElement("a")
+    btnAbout.classList = "btnstyling"
+    btnAbout.href = "aboutme.html"
     const symbolAbout = document.createElement("img")
     symbolAbout.src = "./Images/symbols/favorite_FILL0_wght400_GRAD0_opsz48.svg"
 
