@@ -110,6 +110,7 @@ fancy links
     text-align: center;
     text-decoration: none;
     align-self: center;
+    text-transform: capitalize;
 }
 .link-drop{
     margin-top: 0.5rem;
