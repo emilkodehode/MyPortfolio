@@ -46,9 +46,19 @@ nav{
     justify-content: space-around;
     position: relative;
 }
+.nav-el{
+    background-color: aquamarine;
+}
+.btnstyling{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
 .dropdown-menu{
     position: relative;
-    display: flex;
+    display: inline-block;
     flex-direction: row;
 }
 .dropdown-content{

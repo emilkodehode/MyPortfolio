@@ -39,40 +39,66 @@ function navBarDropDownMaker(targetEl, linkArray){
     });
 }
 
+
+//need to make this into a function that takes in the data as objects so it easier to read what it makes. if i sterilize the wording on variables i can just send it in and let it grow.
 function navMaker(){
     const navEl = document.createElement("nav")
-    const aboutEl = document.createElement("a")
-    const dropdownElContainer = document.createElement("div")
+
     const mainEl = document.createElement("a")
-    const contactEl = document.createElement("a")
-    
-    mainEl.classList = "nav-el link-el"
+    mainEl.classList = "link-el"
     mainEl.href = "index.html"
     mainEl.textContent = "Hovedside"
-
-    dropdownElContainer.className = "nav-el link-el dropdown-menu"
+    const btnHome = document.createElement("div")
+    btnHome.classList = "btnstyling nav-el"
+    const symbolHome = document.createElement("img")
+    symbolHome.src = "./Images/symbols/home_FILL0_wght400_GRAD0_opsz48.svg"
     
+    btnHome.append(mainEl, symbolHome)
+    
+    const dropdownElContainer = document.createElement("div")
+    dropdownElContainer.className = "nav-el link-el dropdown-menu"
+
     const dropdownListEl = document.createElement("div")
     dropdownListEl.classList = "dropdown-content"
     
     const paraDropDown = document.createElement("p")
     paraDropDown.textContent = "Prosjekter"
     paraDropDown.classList = "link-el"
+    const btnDrop = document.createElement("div")
+    btnDrop.className = "btnstyling"
+    const symbolDrop = document.createElement("img")
+    symbolDrop.src = "./Images/symbols/expand_more_FILL0_wght400_GRAD0_opsz48.svg"
     
-    const symbol = document.createElement("img")
-    symbol.src = "./Images/symbols/expand_more_FILL0_wght400_GRAD0_opsz48.svg"
-    
-    contactEl.classList = "nav-el link-el"
+    btnDrop.append(paraDropDown, symbolDrop)
+
+    const contactEl = document.createElement("a")
     contactEl.href = "contact.html"
+    contactEl.classList = "link-el"
     contactEl.textContent = "Kontakt Meg"
+    const btnContact = document.createElement("div")
+    btnContact.className = "btnstyling nav-el"
+    const symbolContact = document.createElement("img")
+    symbolContact.src = "./Images/symbols/mail_FILL0_wght400_GRAD0_opsz48.svg"
     
+    btnContact.append(contactEl, symbolContact)
+    
+    const aboutEl = document.createElement("a")
     aboutEl.classList = "nav-el link-el"
     aboutEl.href = "aboutme.html"
     aboutEl.textContent = "Mer Om Meg"
+    const btnAbout = document.createElement("div")
+    btnAbout.classList = "btnstyling nav-el"
+    const symbolAbout = document.createElement("img")
+    symbolAbout.src = "./Images/symbols/favorite_FILL0_wght400_GRAD0_opsz48.svg"
+
+    btnAbout.append(aboutEl, symbolAbout)
+
+    dropdownElContainer.append(btnDrop, dropdownListEl)
     
-    dropdownElContainer.append(paraDropDown, symbol, dropdownListEl)
-    navEl.append(mainEl, dropdownElContainer, contactEl, aboutEl)
+    navEl.append(btnHome, dropdownElContainer, btnContact, btnAbout)
+    
     headerEL.append(navEl)
+    
     navBarDropDownMaker(dropdownListEl, dropDownContent)
 }
 
@@ -84,7 +110,17 @@ function footerMaker(){
 }
 
 function projectCards(){
-    //link thumbnail
+    /*link thumbnail. div img text link*/
+    const card = document.createElement("div")
+
+    const thumbnail = document.createElement("img")
+
+    const description = document.createElement("p")
+
+    const link = document.createElement("a")
+    link.href = string + ".html"
+    link.textContent = string
+    link.className = "link-el link-drop"
 }
 
 // <nav>
