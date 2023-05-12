@@ -55,7 +55,7 @@ function navMaker(){
     btnHome.append(mainEl, symbolHome)
     
     const dropdownElContainer = document.createElement("div")
-    dropdownElContainer.className = "nav-el link-el dropdown-menu"
+    dropdownElContainer.className = "dropdown-menu"
 
     const dropdownListEl = document.createElement("div")
     dropdownListEl.classList = "dropdown-content"
